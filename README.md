@@ -2,4 +2,4 @@
 
 Schulprojekt
 
-by Tobias W. & Dennis J.
+by Tobias & Dennis
