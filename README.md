@@ -1,2 +1,2 @@
 # Algorithmentest
-Schulprojekt
+Schulprojekt von Dennis und Tobias
