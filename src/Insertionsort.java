@@ -1,4 +1,4 @@
-public class Insertionsort {
+public class Insertionsort extends Sort {
     public int[] sort(int[] array, boolean detailed) {
         for (int i = 0; i < array.length; i++) {
             int entry = array[i];
