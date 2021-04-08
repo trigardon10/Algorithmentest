@@ -4,10 +4,10 @@ public abstract class Sort {
   protected int length;
   protected boolean detailed;
   protected int[] array;
-  public int operationAmount = 0;
+  public long operationAmount = 0;
   public int comparisonAmount = 0;
 
-  public Sort(int length, boolean detailed) {
+  public void init(int length, boolean detailed) {
     this.length = length;
     this.detailed = detailed;
     this.array = this.createRandomArray();

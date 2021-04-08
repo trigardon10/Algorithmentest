@@ -1,8 +1,4 @@
 public class Bubblesort extends Sort {
-    public Bubblesort(int length, boolean detailed) {
-        super(length, detailed);
-    }
-
     public int[] sort() {
         for (int i = array.length; i > 1; i--) {
             for (int y = 0; y < i - 1; y++) {
