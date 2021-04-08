@@ -33,6 +33,51 @@ public abstract class Sort {
     return val1 - val2;
   }
 
+  protected void printMove(int[] arr, int i1, int i2) {
+    if (detailed) {
+      System.out.println(i1 + " --> " + i2);
+      StringBuilder sb = new StringBuilder();
+      for (int k = 0; k < array.length; k++) {
+        boolean close = false;
+        if (k == i2) {
+          sb.append("\u001B[31m");
+          close = true;
+        } else if ((k > i2 && k <= i1) || (k < i2 && k >= i1)) {
+          sb.append("\u001B[33m");
+          close = true;
+        }
+        sb.append(array[k]);
+        if (close) {
+          sb.append("\u001B[0m");
+        }
+        sb.append(", ");
+      }
+      System.out.println(sb);
+      System.out.println();
+    }
+  }
+
+  protected void printSwap(int[] arr, int i1, int i2) {
+    if (detailed) {
+      System.out.println(i1 + " <--> " + i2);
+      StringBuilder sb = new StringBuilder();
+      for (int k = 0; k < array.length; k++) {
+        boolean close = false;
+        if (k == i1 || k == i2) {
+          sb.append("\u001B[33m");
+          close = true;
+        }
+        sb.append(array[k]);
+        if (close) {
+          sb.append("\u001B[0m");
+        }
+        sb.append(", ");
+      }
+      System.out.println(sb);
+      System.out.println();
+    }
+  }
+
   private int[] createRandomArray() {
     int[] arr = new int[this.length];
     for (int i = 0; i < this.length; i++) {

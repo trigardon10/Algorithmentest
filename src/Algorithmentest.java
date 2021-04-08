@@ -34,6 +34,7 @@ public class Algorithmentest {
 
 		if (detailed) {
 			System.out.println("Unsorted: " + Arrays.toString(chosenAlgorithm.array));
+			System.out.println();
 		}
 
 		long startTime = System.nanoTime();

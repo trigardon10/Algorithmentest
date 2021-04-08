@@ -8,27 +8,7 @@ public class Insertionsort extends Sort {
                 j--;
             }
             this.write(array, j, entry);
-
-            // TODO Allgemein halten
-            if (detailed) {
-                System.out.println(i + " --> " + j);
-                StringBuilder sb = new StringBuilder();
-                for (int k = 0; k < array.length; k++) {
-                    boolean close = false;
-                    if (k == j) {
-                        sb.append("\u001B[31m");
-                        close = true;
-                    }
-                    sb.append(array[k]);
-                    if (close) {
-                        sb.append("\u001B[0m");
-                    }
-                    sb.append(", ");
-                }
-                System.out.println(sb);
-                System.out.println();
-            }
-
+            this.printMove(array, i, j);
         }
         return array;
     }
