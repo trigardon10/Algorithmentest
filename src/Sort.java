@@ -5,7 +5,7 @@ public abstract class Sort {
   protected boolean detailed;
   protected int[] array;
   public long operationAmount = 0;
-  public int comparisonAmount = 0;
+  public long comparisonAmount = 0;
 
   public void init(int length, boolean detailed) {
     this.length = length;
@@ -26,6 +26,11 @@ public abstract class Sort {
   protected void write(int[] arr, int idx, int value) {
     arr[idx] = value;
     this.operationAmount++;
+  }
+
+  protected int compare(int val1, int val2) {
+    this.comparisonAmount++;
+    return val1 - val2;
   }
 
   private int[] createRandomArray() {

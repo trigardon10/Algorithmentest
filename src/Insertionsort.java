@@ -3,8 +3,7 @@ public class Insertionsort extends Sort {
         for (int i = 0; i < array.length; i++) {
             int entry = array[i];
             int j = i;
-            // TODO vergleich über Superklasse machen
-            while (j > 0 && array[j - 1] > entry) {
+            while (j > 0 && this.compare(array[j - 1], entry) > 0) {
                 this.write(array, j, array[j - 1]);
                 j--;
             }
