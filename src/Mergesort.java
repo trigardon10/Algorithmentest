@@ -41,6 +41,11 @@ public class Mergesort extends Sort {
             this.write(arr, arrPos++, r[rPos++]);
         }
 
+        if (detailed) {
+            System.out.println(Arrays.toString(l) + " + " + Arrays.toString(r));
+            System.out.println("-> " + Arrays.toString(arr) + "\n");
+        }
+
         return arr;
     }
 }
