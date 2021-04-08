@@ -1,12 +1,14 @@
 public class Bubblesort extends Sort {
-    public int[] sort(int[] array) {
+    public Bubblesort(int length, boolean detailed) {
+        super(length, detailed);
+    }
+
+    public int[] sort() {
         for (int i = array.length; i > 1; i--) {
             for (int y = 0; y < i - 1; y++) {
+                // TODO vergleich über Superklasse machen
                 if (array[y] > array[y + 1]) {
-                    int bigger = array[y];
-                    int smaller = array[y + 1];
-                    array[y] = smaller;
-                    array[y + 1] = bigger;
+                    this.swap(array, y, y + 1);
                 }
             }
         }

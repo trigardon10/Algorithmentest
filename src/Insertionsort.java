@@ -1,14 +1,20 @@
 public class Insertionsort extends Sort {
-    public int[] sort(int[] array, boolean detailed) {
+    public Insertionsort(int length, boolean detailed) {
+        super(length, detailed);
+    }
+
+    public int[] sort() {
         for (int i = 0; i < array.length; i++) {
             int entry = array[i];
             int j = i;
+            // TODO vergleich über Superklasse machen
             while (j > 0 && array[j - 1] > entry) {
-                array[j] = array[j - 1];
+                this.write(array, j, array[j - 1]);
                 j--;
             }
-            array[j] = entry;
+            this.write(array, j, entry);
 
+            // TODO Allgemein halten
             if (detailed) {
                 System.out.println(i + " --> " + j);
                 StringBuilder sb = new StringBuilder();
