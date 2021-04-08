@@ -6,7 +6,7 @@ public class Algorithmentest {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Sort[] algorithms = { new Bubblesort(), new Insertionsort() };
+		Sort[] algorithms = { new Bubblesort(), new Insertionsort(), new Radixsort() };
 
 		// Algorithmus auswählen
 		System.out.println("Wählen Sie eine der folgenden Optionen");
